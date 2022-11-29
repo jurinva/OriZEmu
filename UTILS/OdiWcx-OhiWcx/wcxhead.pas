@@ -3,6 +3,8 @@
 
 unit wcxhead;
 
+{$MODE Delphi}
+
 interface
 
 Uses Windows;

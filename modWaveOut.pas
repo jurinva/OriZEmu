@@ -1,4 +1,7 @@
 unit modWaveOut;
+
+{$MODE Delphi}
+
 {' /*******************************************************************************
 '   modWaveOut.bas within vbSpec.vbp
 '
@@ -27,7 +30,7 @@ unit modWaveOut;
 
 interface
 
-uses windows, mmsystem;
+uses windows;
 
 {$I 'OrionZEm.inc'}
 

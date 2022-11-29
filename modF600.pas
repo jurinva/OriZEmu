@@ -16,6 +16,8 @@
 
 unit modF600;
 
+{$MODE Delphi}
+
 { interface definitions for plugins emulating devices at extension port F600 }
 
 interface

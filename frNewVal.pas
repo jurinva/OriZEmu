@@ -16,11 +16,13 @@
 
 unit frNewVal;
 
+{$MODE Delphi}
+
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Mask;
+  StdCtrls, MaskEdit;
 
 const
   strictMask16: string = 'AAAA;1;_';
@@ -48,7 +50,7 @@ implementation
 
 uses mainwin;
 
-{$R *.DFM}
+{$R *.lfm}
 
 function GetValue16(title: string; DefaultValue: integer; var Value:string; var Mask: integer): integer;
 begin

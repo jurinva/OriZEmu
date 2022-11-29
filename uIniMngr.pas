@@ -17,9 +17,11 @@
 
 unit uIniMngr;
 
+//{$MODE Delphi}
+
 interface
 
-Uses Windows, SysUtils, Classes, Forms, Menus, TypInfo, IniFiles;
+Uses SysUtils, Classes, Forms, Menus, TypInfo, IniFiles, LCLType;
 
 const
   BufSize = 32768;
@@ -199,7 +201,7 @@ begin
   if Assigned(FInstance) and (FPropertyName<>'') and
      FindProperty(FInstance, FPropertyName, FPropInfo) then
   begin
-     FPropType:=FPropInfo^.PropType^;
+     FPropType:=FPropInfo.PropType;
      case FPropType^.Kind of
         tkInteger, tkChar, tkEnumeration, tkSet:
            Result:=GetOrdProp(FInstance, FPropInfo);
@@ -220,7 +222,7 @@ begin
   if Assigned(FInstance) and (FPropertyName<>'') and
      FindProperty(FInstance, FPropertyName, FPropInfo) then
   begin
-     FPropType:=FPropInfo^.PropType^;
+     FPropType:=FPropInfo.PropType;
      case FPropType^.Kind of
         tkInteger, tkChar, tkEnumeration, tkSet:
            Result:=GetOrdProp(FInstance, FPropInfo);
@@ -238,7 +240,7 @@ begin
   if Assigned(FInstance) and (FPropertyName<>'') and
      FindProperty(FInstance, FPropertyName, FPropInfo) then
   begin
-     FPropType:=FPropInfo^.PropType^;
+     FPropType:=FPropInfo.PropType;
      case FPropType^.Kind of
         tkInteger, tkChar, tkEnumeration, tkSet:
            Result:=IntToStr(GetOrdProp(FInstance, FPropInfo));
@@ -308,7 +310,7 @@ begin
   if Assigned(FInstance) and (FPropertyName<>'') and
      FindProperty(FInstance, FPropertyName, FPropInfo) then
   begin
-     FPropType:=FPropInfo^.PropType^;
+     FPropType:=FPropInfo.PropType;
      case FPropType^.Kind of
         tkInteger, tkChar, tkEnumeration, tkSet:
           SetOrdProp(FInstance, FPropInfo, Trunc(Value));
@@ -325,7 +327,7 @@ begin
   if Assigned(FInstance) and (FPropertyName<>'') and
      FindProperty(FInstance, FPropertyName, FPropInfo) then
   begin
-     FPropType:=FPropInfo^.PropType^;
+     FPropType:=FPropInfo.PropType;
      case FPropType^.Kind of
         tkInteger, tkChar, tkEnumeration, tkSet:
           SetOrdProp(FInstance, FPropInfo, Value);
@@ -344,7 +346,7 @@ begin
   if Assigned(FInstance) and (FPropertyName<>'') and
      FindProperty(FInstance, FPropertyName, FPropInfo) then
   begin
-     FPropType:=FPropInfo^.PropType^;
+     FPropType:=FPropInfo.PropType;
      case FPropType^.Kind of
         tkInteger, tkChar, tkEnumeration, tkSet:
           SetOrdProp(FInstance, FPropInfo, StrToIntDef(Value,0));
@@ -432,7 +434,7 @@ begin
      end;
      if Length(st)>BufferSize-3 then st:=copy(st,1,BufferSize-3);
      st:=st+#0#0;
-     CopyMemory(Buffer, PChar(st), Length(st));
+     Move(Buffer, st, Length(st));
      Result:=Length(st);
      FileSL.Free;
 end;
@@ -677,7 +679,7 @@ begin
     with TIniBindRec(FBindList.Items[ID]) do
       if FindProperty(FInstance, FPropertyName, PropInfo) then
       begin
-        PropType:=PropInfo^.PropType^;
+        PropType:=PropInfo.PropType;
         case PropType^.Kind of
           tkInteger, tkChar, tkEnumeration, tkSet:
             WritePrivateInt(FSectionName, FKeyName, GetOrdProp(Instance, PropInfo));
@@ -698,7 +700,7 @@ begin
     with TIniBindRec(FBindList.Items[ID]) do
       if FindProperty(FInstance, FPropertyName, PropInfo) then
       begin
-        PropType:=PropInfo^.PropType^;
+        PropType:=PropInfo.PropType;
         case PropType^.Kind of
           tkInteger, tkChar, tkEnumeration, tkSet:
             SetOrdProp(Instance, PropInfo, GetPrivateInt(FSectionName, FKeyName, StrToInt(FDefaultValue)));
@@ -834,11 +836,11 @@ begin
   end;
 end;
 
-procedure TIniManager.SetRecentFilesMenuItem(const Value: TMenuItem);
-begin
-  FRecentFilesMenuItem := Value;
-  if Assigned(Value) then Value.AutoHotkeys:=maManual;
-end;
+//procedure TIniManager.SetRecentFilesMenuItem(const Value: TMenuItem);
+//begin
+//  FRecentFilesMenuItem := Value;
+//  if Assigned(Value) then Value.AutoHotkeys:=maManual;
+//end;
 
 function TIniManager.CheckIniFile: TAsofIniFile;
 begin

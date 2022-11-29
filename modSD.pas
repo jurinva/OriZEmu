@@ -27,13 +27,15 @@
 
 unit modSD;
 
+{$MODE Delphi}
+
 interface
 
 
 {$I 'OrionZEm.inc'}
 
 
-Uses Windows, SysUtils, classes, Forms, HDDUtils;
+Uses Windows, SysUtils, classes, Forms, HDDUtils, FileUtil;
 
 const
 { HARDWARE - RTC/SD port $F762}
@@ -294,28 +296,28 @@ begin
        PrevR0:=R0;
        R0:=Value;
        if ((R0 and SD_CLK)<>(PrevR0 and SD_CLK))and   // SD_CLK changing
-          ((R0 and SD_PWR)<>0)and                     // питание на карту подано
+          ((R0 and SD_PWR)<>0)and                     // ГЇГЁГІГ Г­ГЁГҐ Г­Г  ГЄГ Г°ГІГі ГЇГ®Г¤Г Г­Г®
            SDEnabled() then
        begin                                          // clock pin state changing
          if (PrevR0 and SD_CLK)=0 then
-         begin                                        // фронт импульса CLK
+         begin                                        // ГґГ°Г®Г­ГІ ГЁГ¬ГЇГіГ«ГјГ±Г  CLK
            inc(InpBitCount);
-           if (spiState<>SPI_PWR_STATE) then          // карта проинициализирована
+           if (spiState<>SPI_PWR_STATE) then          // ГЄГ Г°ГІГ  ГЇГ°Г®ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°Г®ГўГ Г­Г 
            begin
-             if ((R0 and SD_CS)<>0) then              // карта выбрана
+             if ((R0 and SD_CS)<>0) then              // ГЄГ Г°ГІГ  ГўГ»ГЎГ°Г Г­Г 
              begin
                if (R0 and SD_DOUT)=0 then
-                 spiByte:=spiByte and $FE             // защелкивание "0" по фронту (SPI 0)
+                 spiByte:=spiByte and $FE             // Г§Г Г№ГҐГ«ГЄГЁГўГ Г­ГЁГҐ "0" ГЇГ® ГґГ°Г®Г­ГІГі (SPI 0)
                else
-                 spiByte:=spiByte or 1;               // защелкивание "1" по фронту (SPI 0)
+                 spiByte:=spiByte or 1;               // Г§Г Г№ГҐГ«ГЄГЁГўГ Г­ГЁГҐ "1" ГЇГ® ГґГ°Г®Г­ГІГі (SPI 0)
                if (spiState=SPI_IDLE_STATE) and
-                  ((spiByte and $C0)=$40) then        // пришла команда
+                  ((spiByte and $C0)=$40) then        // ГЇГ°ГЁГёГ«Г  ГЄГ®Г¬Г Г­Г¤Г 
                begin
                  UpdateSpi;
                  InpBitCount:=0;
                end;
              end
-             else                                     // карта не выбрана -> передача следующему в кольце (т.е. на выход)
+             else                                     // ГЄГ Г°ГІГ  Г­ГҐ ГўГ»ГЎГ°Г Г­Г  -> ГЇГҐГ°ГҐГ¤Г Г·Г  Г±Г«ГҐГ¤ГіГѕГ№ГҐГ¬Гі Гў ГЄГ®Г«ГјГ¶ГҐ (ГІ.ГҐ. Г­Г  ГўГ»ГµГ®Г¤)
              begin
                if (R0 and SD_DOUT)=0 then
                  SPDR:=SPDR and $FE
@@ -326,14 +328,14 @@ begin
            else UpdateSpi;                            // wait for initial 74 more clocks
          end
          else
-         begin                                        // спад импульса CLK
+         begin                                        // Г±ГЇГ Г¤ ГЁГ¬ГЇГіГ«ГјГ±Г  CLK
            rl(SPDR);
            if (spiState<>SPI_PWR_STATE) and (InpBitCount=8) then
            begin
-             InpBitCount:=0;                          // идем побайтно
+             InpBitCount:=0;                          // ГЁГ¤ГҐГ¬ ГЇГ®ГЎГ Г©ГІГ­Г®
              if ((R0 and SD_CS)<>0) then UpdateSpi;
            end;
-           rl(spiByte);                               // сдвиг по спаду (SPI 0)
+           rl(spiByte);                               // Г±Г¤ГўГЁГЈ ГЇГ® Г±ГЇГ Г¤Гі (SPI 0)
          end;
        end;
      end; {if}
@@ -360,24 +362,24 @@ begin
   with FParams do
   case Scheme of
    0: Port0:=Value;                                     // N8VEM
-   1: if ((R0 and SD_PWR)<>0) then                      // питание на карту подано
-      begin                                             // MSX - и фронт и спад CLK формируются автоматически по сигналам /WR, /RD (в пределах одной команды CPU)
-// фронт
+   1: if ((R0 and SD_PWR)<>0) then                      // ГЇГЁГІГ Г­ГЁГҐ Г­Г  ГЄГ Г°ГІГі ГЇГ®Г¤Г Г­Г®
+      begin                                             // MSX - ГЁ ГґГ°Г®Г­ГІ ГЁ Г±ГЇГ Г¤ CLK ГґГ®Г°Г¬ГЁГ°ГіГѕГІГ±Гї Г ГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ ГЇГ® Г±ГЁГЈГ­Г Г«Г Г¬ /WR, /RD (Гў ГЇГ°ГҐГ¤ГҐГ«Г Гµ Г®Г¤Г­Г®Г© ГЄГ®Г¬Г Г­Г¤Г» CPU)
+// ГґГ°Г®Г­ГІ
         R1:=Value;
         inc(InpBitCount);
-        if (spiState<>SPI_PWR_STATE) then              // карта проинициализирована
+        if (spiState<>SPI_PWR_STATE) then              // ГЄГ Г°ГІГ  ГЇГ°Г®ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°Г®ГўГ Г­Г 
         begin
-          if ((R0 and SD_CS)<>0) then                  // карта выбрана
+          if ((R0 and SD_CS)<>0) then                  // ГЄГ Г°ГІГ  ГўГ»ГЎГ°Г Г­Г 
           begin
             if ((R1 and MSXSD_WR)=0) then
-              spiByte:=spiByte and $FE             // защелкивание "0"
+              spiByte:=spiByte and $FE             // Г§Г Г№ГҐГ«ГЄГЁГўГ Г­ГЁГҐ "0"
             else
-              spiByte:=spiByte or 1;               // защелкивание "1"
+              spiByte:=spiByte or 1;               // Г§Г Г№ГҐГ«ГЄГЁГўГ Г­ГЁГҐ "1"
             if (spiState=SPI_IDLE_STATE) and
-               ((spiByte and $C0)=$40) then        // пришла команда
+               ((spiByte and $C0)=$40) then        // ГЇГ°ГЁГёГ«Г  ГЄГ®Г¬Г Г­Г¤Г 
               InpBitCount:=8;                           
           end
-          else                                     // карта не выбрана -> передача следующему в кольце (т.е. на выход)
+          else                                     // ГЄГ Г°ГІГ  Г­ГҐ ГўГ»ГЎГ°Г Г­Г  -> ГЇГҐГ°ГҐГ¤Г Г·Г  Г±Г«ГҐГ¤ГіГѕГ№ГҐГ¬Гі Гў ГЄГ®Г«ГјГ¶ГҐ (ГІ.ГҐ. Г­Г  ГўГ»ГµГ®Г¤)
           begin
             if ((R1 and MSXSD_WR)=0) then
               SPDR:=SPDR and $FE
@@ -386,15 +388,15 @@ begin
           end;
         end
         else UpdateSpi;                            // wait for initial 74 more clocks
-// спад
+// Г±ГЇГ Г¤
         rl(SPDR);
         RDout:=SPDR;
         if (spiState<>SPI_PWR_STATE) and (InpBitCount=8) then
         begin
           if ((R0 and SD_CS)<>0) then UpdateSpi;
-          InpBitCount:=0;                          // идем побайтно
+          InpBitCount:=0;                          // ГЁГ¤ГҐГ¬ ГЇГ®ГЎГ Г©ГІГ­Г®
         end;
-        rl(spiByte);                               // сдвиг по спаду (SPI 0)
+        rl(spiByte);                               // Г±Г¤ГўГЁГЈ ГЇГ® Г±ГЇГ Г¤Гі (SPI 0)
       end; {case MSX}
   end; {case}
 end;
@@ -587,8 +589,8 @@ begin
             CMD58: begin                                // $7A = READ_OCR
 {R3 response.  Returns OCR:}
 { R1[39:32] 32bit_OCR[31:0] }
-{‘00000001’ '1 0 00000000001000 00000000 00000000'}
-{‘00000001’ Ready, nonSDHC, 3.3V}
+{В‘00000001В’ '1 0 00000000001000 00000000 00000000'}
+{В‘00000001В’ Ready, nonSDHC, 3.3V}
               SPDR:=$FF;                                // does 8-bit NCR on next clock period
               spiState := SPI_RESPOND_SINGLE;
               spiResponseBuffer[0] := $00;              // no errors, no idle     // $01
@@ -773,7 +775,7 @@ begin
   if Assigned(FBuf) then
     FreeMem(FBuf);
   if FHandle<>INVALID_HANDLE_VALUE then
-    CloseHandle(FHandle);
+    FileClose(FHandle); { *Converted from CloseHandle* }
 end;
 
 procedure TSDController.ReadFromStream(Stream: TStream);
@@ -874,13 +876,13 @@ begin
     FImgFile:=trim(Value);
     if FImgFile='' then begin
       if FHandle<>INVALID_HANDLE_VALUE then
-        CloseHandle(FHandle);
+        FileClose(FHandle); { *Converted from CloseHandle* }
       FHandle:=INVALID_HANDLE_VALUE;
     end
     else
     begin
       if FHandle<>INVALID_HANDLE_VALUE then
-        CloseHandle(FHandle);
+        FileClose(FHandle); { *Converted from CloseHandle* }
       FHandle:=INVALID_HANDLE_VALUE;
       if IsDrive(FImgFile, @cDrive) then
       begin
@@ -902,7 +904,7 @@ begin
           if (FHandle=INVALID_HANDLE_VALUE) then
             raise Exception.Create(LastError);
         end;
-        dwSizeLow := GetFileSize(FHandle, @dwSizeHigh);
+        dwSizeLow := FileSize(FHandle); { *Converted from GetFileSize* }
         if (dwSizeLow = $FFFFFFFF) and (GetLastError() <> NO_ERROR ) then
             raise Exception.Create(LastError);
         FDiskSize:=dwSizeHigh;
@@ -937,7 +939,7 @@ begin
   FOnAccess := Value;
 end;
 
-procedure TSDController.rl(var bb: byte);       // сдвиг влево с циклическим переносом
+procedure TSDController.rl(var bb: byte);       // Г±Г¤ГўГЁГЈ ГўГ«ГҐГўГ® Г± Г¶ГЁГЄГ«ГЁГ·ГҐГ±ГЄГЁГ¬ ГЇГҐГ°ГҐГ­Г®Г±Г®Г¬
 begin
   if (bb and $80)=0 then
     bb:=(bb shl 1)

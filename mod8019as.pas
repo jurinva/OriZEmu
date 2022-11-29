@@ -17,6 +17,8 @@
 
 unit mod8019as;
 
+{$MODE Delphi}
+
 {***********************************************
 
     RTL8019AS (Ethernet MAC+PHY) emulation

@@ -16,6 +16,8 @@
 
 unit HDDUtils;
 
+{$MODE Delphi}
+
 interface
 
 uses
@@ -337,7 +339,7 @@ begin
                                  @Buffer, BufferSize, cbBytesReturned, nil );
       finally
         if hDevice <> INVALID_HANDLE_VALUE then
-          CloseHandle(hDevice);
+          FileClose(hDevice); { *Converted from CloseHandle* }
       end;
     end
   else
@@ -367,7 +369,7 @@ begin
                                 pOutData, W9xBufferSize, cbBytesReturned, nil );
       finally
         if hDevice <> INVALID_HANDLE_VALUE then
-          CloseHandle(hDevice);
+          FileClose(hDevice); { *Converted from CloseHandle* }
       end;
     end;
   CopyMemory(IdSector, PIdSector(PChar(pOutData)+16), sizeof(TIdSector));

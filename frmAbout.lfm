@@ -1,0 +1,111 @@
+object AboutBox: TAboutBox
+  Left = 211
+  Top = 169
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'About...'
+  ClientHeight = 196
+  ClientWidth = 383
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  object TitleLabel: TLabel
+    Left = 65
+    Top = 4
+    Width = 312
+    Height = 22
+    Alignment = taCenter
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clPurple
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 64
+    Top = 48
+    Width = 313
+    Height = 18
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Copyright (ñ) 2016  Sergey A.'
+  end
+  object VersionLabel: TLabel
+    Left = 64
+    Top = 26
+    Width = 309
+    Height = 18
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'version 1.09.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 9
+    Top = 12
+    Width = 49
+    Height = 49
+    TabOrder = 1
+    object Image1: TImage
+      Left = 6
+      Top = 6
+      Width = 33
+      Height = 33
+    end
+  end
+  object Button1: TButton
+    Left = 160
+    Top = 165
+    Width = 75
+    Height = 25
+    Cancel = True
+    Caption = 'OK'
+    Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ModalResult = 1
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ServerMemo: TMemo
+    Left = 9
+    Top = 73
+    Width = 365
+    Height = 80
+    Alignment = taCenter
+    Color = clBtnFace
+    Lines.Strings = (
+      'Orion/Z (Orion-128 + Z80-CARD-II,  Orion-PRO) emulator,'
+      '        version 1.09'
+      ''
+      '     Author: Sergey A. <a-s-m@km.ru>'
+      ''
+      '                    Copyright (c) 2016 Sergey À.   '
+      ''
+      ' This program is free software; you can redistribute it and/or  '
+      '                             modify it in any ways.                            '
+      ' This program is distributed "AS IS" in the hope that it will be '
+      '  useful, but WITHOUT ANY WARRANTY; without even the implied'
+      '  warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR'
+      '            PURPOSE.'
+    )
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+end

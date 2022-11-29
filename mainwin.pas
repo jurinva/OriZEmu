@@ -17,6 +17,8 @@
 
 unit mainwin;
 
+{$MODE Delphi}
+
 interface
 
 
@@ -24,9 +26,9 @@ interface
 
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, ComCtrls, Menus, ToolWin, MMSystem, Math,
-  uIniMngr, ScrThrd, mod8019as, modWaveOut, Grids, Mask, ActnList, ImgList, StdActns;
+  Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ExtCtrls, StdCtrls, ComCtrls, Menus, ToolWin, Math,
+  uIniMngr, ScrThrd, mod8019as, modWaveOut, Grids, MaskEdit, ActnList, ImgList, StdActns;
 
 const
  ODI_EXT='ODI';
@@ -281,9 +283,9 @@ function GetHexMasked16(st: string; var Mask: integer): integer;
 
 implementation
 
-{$R *.DFM}
+{$R *.lfm}
 
-Uses modOrion, modZ80, mod1793, mod8255, mod146818, modAY8912, modHdd, modSD, mod232, EthThrd, uCRC32, settswin,
+Uses modOrion, modZ80, mod1793, mod8255, mod146818, modAY8912, modHDD, modSD, mod232, EthThrd, uCRC32, settswin,
   frmAbout, frmSaveOrd, frNewVal;
 
 Var
@@ -426,7 +428,7 @@ procedure TfrmMain.CreateBitmap(aSX, aSY: Integer);
 var
   BInfo: tagBITMAPINFO;
 begin
-  // Создание DIB
+  // Г‘Г®Г§Г¤Г Г­ГЁГҐ DIB
   SX := aSX; SY := aSY;
   BInfo.bmiHeader.biSize := sizeof(tagBITMAPINFOHEADER);
   BInfo.bmiHeader.biWidth := SX;
@@ -441,7 +443,7 @@ end;
 
 procedure TfrmMain.DeleteBitmap;
 begin
-  // Удаление DIB
+  // Г“Г¤Г Г«ГҐГ­ГЁГҐ DIB
   ScrBitmap.FreeImage();
   ScrBitmap.Destroy;
 end;
@@ -450,7 +452,7 @@ procedure TfrmMain.RecreateBitmap(aSX, aSY: Integer);
 var
   BInfo: tagBITMAPINFO;
 begin
-  // Пересоздание DIB при изменении размеров "экрана"
+  // ГЏГҐГ°ГҐГ±Г®Г§Г¤Г Г­ГЁГҐ DIB ГЇГ°ГЁ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГЁ Г°Г Г§Г¬ГҐГ°Г®Гў "ГЅГЄГ°Г Г­Г "
   ScrBitmap.FreeImage();
   SX := aSX; SY := aSY;
   BInfo.bmiHeader.biSize := sizeof(tagBITMAPINFOHEADER);
@@ -535,9 +537,9 @@ begin
   OutB($F9, 0);
   OutB($08, 0);
   OutB($FA, 0);
-  OutB($FB, pFB_disp_off +   // диспетчер 16к выключен  (D7=1)
-            pFB_int50_off +  // прерывания выключены    (D6=0)
-            pFB_TopRam_off); // F400..FFFF - порты+ПЗУ  (D5=0)
+  OutB($FB, pFB_disp_off +   // Г¤ГЁГ±ГЇГҐГІГ·ГҐГ° 16ГЄ ГўГ»ГЄГ«ГѕГ·ГҐГ­  (D7=1)
+            pFB_int50_off +  // ГЇГ°ГҐГ°Г»ГўГ Г­ГЁГї ГўГ»ГЄГ«ГѕГ·ГҐГ­Г»    (D6=0)
+            pFB_TopRam_off); // F400..FFFF - ГЇГ®Г°ГІГ»+ГЏГ‡Г“  (D5=0)
   OutB($FC, 0);
   OutB($FE, 0);
   try

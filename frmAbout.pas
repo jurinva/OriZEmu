@@ -17,6 +17,8 @@
 
 unit frmAbout;
 
+{$MODE Delphi}
+
 interface
 
 uses
@@ -44,7 +46,7 @@ var
 
 implementation
 
-{$R *.DFM}
+{$R *.lfm}
 
 procedure TAboutBox.FormActivate(Sender: TObject);
 begin

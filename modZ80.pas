@@ -1,5 +1,7 @@
 unit modZ80;
 
+{$MODE Delphi}
+
 {
 ' /*******************************************************************************
 '
@@ -65,7 +67,7 @@ procedure execute(var local_tstates: integer);
 
 implementation
 
-uses Windows, Forms, Sysutils, mmsystem, modOrion, modWaveout, modAY8912, mod146818, mod8255, mod232 {!!! mainwin};
+uses Windows, Forms, Sysutils, modOrion, modWaveOut, modAY8912, mod146818, mod8255, mod232 {!!! mainwin};
 
 procedure adc_a(b: integer);
     var

@@ -50,6 +50,8 @@
 
 unit uPackOdi;
 
+{$MODE Delphi}
+
 interface
 
 uses
@@ -283,7 +285,7 @@ function GetBOOT(FName: string; FS: TFileStream; FmtN: integer):boolean;
 implementation
 
 {
-; ФОРМАТ МАССИВА DPB ВООТ-СЕКТОРА (BOOT+8 .. BOOT+1EH)
+; Г”ГЋГђГЊГЂГ’ ГЊГЂГ‘Г‘Г€Г‚ГЂ DPB Г‚ГЋГЋГ’-Г‘Г…ГЉГ’ГЋГђГЂ (BOOT+8 .. BOOT+1EH)
 ;    0        1       2       3       4       5       6       7
 ;  +---------------------------------------------------------------+
 ;0 |PAGE=1  PAGE=1  lengt=3 const=1   SEC   const=0   TRK   const=0|
@@ -924,7 +926,7 @@ begin
       FileAttr:=FAttr;
       FExtents:=TList.Create;
       FExtents.Add(PFCBExt);
-      PFCBExt^.SerialN:=SerialN;                          // ссылка на элемент каталога
+      PFCBExt^.SerialN:=SerialN;                          // Г±Г±Г»Г«ГЄГ  Г­Г  ГЅГ«ГҐГ¬ГҐГ­ГІ ГЄГ ГІГ Г«Г®ГЈГ 
       PFCBExt^.OrdinalN:=GetFCBordinalN(FCB);
       PFCBExt^.LogBlkCnt:=FCB.SizePartial;
       PFCBExt^.FCBextents:=FCB.FCBextents;
@@ -940,7 +942,7 @@ begin
       if j>FileSize then FileSize:=j;
       new(PFCBExt);
       FExtents.Add(PFCBExt);
-      PFCBExt^.SerialN:=SerialN;                          // ссылка на элемент каталога
+      PFCBExt^.SerialN:=SerialN;                          // Г±Г±Г»Г«ГЄГ  Г­Г  ГЅГ«ГҐГ¬ГҐГ­ГІ ГЄГ ГІГ Г«Г®ГЈГ 
       PFCBExt^.OrdinalN:=GetFCBordinalN(FCB);
       PFCBExt^.LogBlkCnt:=FCB.SizePartial;
       PFCBExt^.FCBextents:=FCB.FCBextents;

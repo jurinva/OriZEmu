@@ -23,9 +23,11 @@
 
 unit modHDD;
 
+{$MODE Delphi}
+
 interface
 
-Uses Windows, SysUtils, classes, mod8255, HDDUtils;
+Uses Windows, SysUtils, classes, mod8255, HDDUtils, FileUtil;
 
 
 {$I 'OrionZEm.inc'}
@@ -528,7 +530,7 @@ begin
       if (FHandle=INVALID_HANDLE_VALUE) then
         raise Exception.Create(LastError);
     end;
-    dwSizeLow := GetFileSize(FHandle, @dwSizeHigh);
+    dwSizeLow := FileSize(FHandle); { *Converted from GetFileSize* }
     if (dwSizeLow = $FFFFFFFF) and (GetLastError() <> NO_ERROR ) then
         raise Exception.Create(LastError);
     FDiskSize:=dwSizeHigh;
@@ -544,7 +546,7 @@ destructor TIdeDevice.Destroy;
 begin
   inherited;
   if FHandle<>INVALID_HANDLE_VALUE then
-    CloseHandle(FHandle);
+    FileClose(FHandle); { *Converted from CloseHandle* }
   if Assigned(FBuf) then FreeMem(FBuf);
 end;
 
@@ -696,21 +698,21 @@ begin
   If FPrevCtl<>Value then
   begin
     if ((FPrevCtl and ide_wr_line)<>(Value and ide_wr_line)) and
-        (Value and ide_wr_line <> 0) then                                        // по фронту импульса WRITE
+        (Value and ide_wr_line <> 0) then                                        // ГЇГ® ГґГ°Г®Г­ГІГі ГЁГ¬ГЇГіГ«ГјГ±Г  WRITE
       begin
         FCtl := Value and (not (ide_wr_line or ide_rd_line or ide_rst_line));    // register address
         IdeWrite();
       end
     else
     if ((FPrevCtl and ide_rd_line)<>(Value and ide_rd_line)) and
-        (Value and ide_rd_line <> 0) then                                        // по фронту импульса READ
+        (Value and ide_rd_line <> 0) then                                        // ГЇГ® ГґГ°Г®Г­ГІГі ГЁГ¬ГЇГіГ«ГјГ±Г  READ
       begin
         FCtl := Value and (not (ide_wr_line or ide_rd_line or ide_rst_line));    // register address
         IdeRead()
       end
     else
     if ((FPrevCtl and ide_rst_line)<>(Value and ide_rst_line)) and
-       (Value and ide_rst_line = 0) then                                         // по спаду импульса RESET
+       (Value and ide_rst_line = 0) then                                         // ГЇГ® Г±ГЇГ Г¤Гі ГЁГ¬ГЇГіГ«ГјГ±Г  RESET
       IdeReset();
     FPrevCtl:=Value;
   end

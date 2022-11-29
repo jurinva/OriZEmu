@@ -17,6 +17,8 @@
 
 unit uCRC32;
 
+{$MODE Delphi}
+
 interface
 
 Uses Windows;

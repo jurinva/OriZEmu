@@ -23,6 +23,8 @@
 
 unit EthThrd;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'OrionZEm.inc'}
@@ -481,8 +483,8 @@ end;
 
 destructor TEthThread.Destroy;
 begin
-  CloseHandle(FWriteEvent);
-  CloseHandle(FReadEvent);
+  FileClose(FWriteEvent); { *Converted from CloseHandle* }
+  FileClose(FReadEvent); { *Converted from CloseHandle* }
   FFramesList.Free;
   FFreeList.Free;
   inherited;
@@ -632,14 +634,14 @@ begin
                           @FVersion, sizeof (FVersion),
                           @FVersion, sizeof (FVersion), len, nil)) then
   begin
-    CloseHandle(hndl);
+    FileClose(hndl); { *Converted from CloseHandle* }
     raise Exception.CreateFmt('Error TAP adapter - DeviceIoControl (1): %s', [LastWinError()]);
   end;
   val:=1;
   if (not DeviceIoControl(hndl, TAP_IOCTL_SET_MEDIA_STATUS,
                           @val, sizeof(val), @val, sizeof(val), len, nil)) then
   begin
-    CloseHandle(hndl);
+    FileClose(hndl); { *Converted from CloseHandle* }
     raise Exception.CreateFmt('Error TAP adapter - DeviceIoControl (2): %s', [LastWinError()]);
   end;
   FTAPHandle:=hndl;
@@ -654,7 +656,7 @@ begin
     if (not DeviceIoControl(FTAPHandle, TAP_IOCTL_SET_MEDIA_STATUS,
                             @val, sizeof(val), @val, sizeof(val), len, nil)) then
       raise Exception.CreateFmt('Error TAP adapter - DeviceIoControl: %s', [LastWinError()]);
-    CloseHandle(FTAPHandle);
+    FileClose(FTAPHandle); { *Converted from CloseHandle* }
   end;
   FTAPHandle:=INVALID_HANDLE_VALUE;
 end;
@@ -739,7 +741,7 @@ function TEthThread.GetStat: string;
      ch:=chr(ord(ch) xor $20);
    end;
    if Actual>=1024*1024 then
-     result:=ch+format(':%dÌ', [Actual div (1024*1024)])
+     result:=ch+format(':%dÃŒ', [Actual div (1024*1024)])
    else if Actual>=1024 then
      result:=ch+format(':%dK', [Actual div 1024])
    else

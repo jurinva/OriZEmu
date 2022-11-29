@@ -1,0 +1,211 @@
+OrionZEm.lpi Note: Added defines -dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL in custom options
+ Progress: Found all unit files
+OrionZEm.lpr(17,18) Note: Added MODE Delphi syntax modifier after unit name.
+ : 
+ : *** Converting unit files belonging to project/package ***
+mainwin.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+mainwin.pas Note: Repairing include files : OrionZEm.inc
+mainwin.pas(286,64) Note: Fixed character case of unit "modHdd" to "modHDD".
+mainwin.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+mainwin.pas Note: Removed unit "MMSystem" from uses section.
+mainwin.pas(18,14) Note: Added MODE Delphi syntax modifier after unit name.
+modWaveOut.pas Note: Repairing include files : OrionZEm.inc
+modWaveOut.pas Note: Removed unit "mmsystem" from uses section.
+modWaveOut.pas(1,17) Note: Added MODE Delphi syntax modifier after unit name.
+modZ80.pas Note: Repairing include files : OrionZEm.inc
+modZ80.pas(68,52) Note: Fixed character case of unit "modWaveout" to "modWaveOut".
+modZ80.pas Note: Removed unit "mmsystem" from uses section.
+modZ80.pas(1,13) Note: Added MODE Delphi syntax modifier after unit name.
+ScrThrd.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+ScrThrd.pas Note: Repairing include files : OrionZEm.inc
+ScrThrd.pas(18,14) Note: Added MODE Delphi syntax modifier after unit name.
+mod8255.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+mod8255.pas Note: Repairing include files : OrionZEm.inc
+mod8255.pas(18,14) Note: Added MODE Delphi syntax modifier after unit name.
+mod1793.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+mod1793.pas Note: Repairing include files : OrionZEm.inc
+mod1793.pas(24,14) Note: Added MODE Delphi syntax modifier after unit name.
+modOrion.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+modOrion.pas Note: Repairing include files : OrionZEm.inc
+modOrion.pas(18,15) Note: Added MODE Delphi syntax modifier after unit name.
+mod146818.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+mod146818.pas Note: Repairing include files : OrionZEm.inc
+mod146818.pas(18,16) Note: Added MODE Delphi syntax modifier after unit name.
+settswin.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+settswin.pas Note: Repairing include files : OrionZEm.inc
+settswin.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+settswin.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+settswin.pas(18,15) Note: Added MODE Delphi syntax modifier after unit name.
+uIniMngr.pas(18,15) Note: Added MODE Delphi syntax modifier after unit name.
+frmAbout.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+frmAbout.pas(18,15) Note: Added MODE Delphi syntax modifier after unit name.
+modAY8912.pas Note: Repairing include files : OrionZEm.inc
+modAY8912.pas(1,16) Note: Added MODE Delphi syntax modifier after unit name.
+modHDD.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+modHDD.pas Note: Repairing include files : OrionZEm.inc
+modHDD.pas(24,13) Note: Added MODE Delphi syntax modifier after unit name.
+modHDD.pas(547,5) Note: Replaced call CloseHandle(FHandle); with FileClose(FHandle); { *Converted from CloseHandle* }
+modHDD.pas(531,18) Note: Replaced call GetFileSize(FHandle, @dwSizeHigh); with FileSize(FHandle); { *Converted from GetFileSize* }
+modHDD.pas Note: Added unit "FileUtil" to uses section.
+HDDUtils.pas(17,15) Note: Added MODE Delphi syntax modifier after unit name.
+HDDUtils.pas(370,11) Note: Replaced call CloseHandle(hDevice); with FileClose(hDevice); { *Converted from CloseHandle* }
+HDDUtils.pas(340,11) Note: Replaced call CloseHandle(hDevice); with FileClose(hDevice); { *Converted from CloseHandle* }
+modF600.pas(17,14) Note: Added MODE Delphi syntax modifier after unit name.
+frmSaveOrd.pas(17,17) Note: Added MODE Delphi syntax modifier after unit name.
+uPackOdi.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+uPackOdi.pas(51,15) Note: Added MODE Delphi syntax modifier after unit name.
+wcxhead.pas(4,14) Note: Added MODE Delphi syntax modifier after unit name.
+frNewVal.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+frNewVal.pas(17,15) Note: Added MODE Delphi syntax modifier after unit name.
+modSD.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+modSD.pas Note: Repairing include files : OrionZEm.inc
+modSD.pas(28,12) Note: Added MODE Delphi syntax modifier after unit name.
+modSD.pas(905,22) Note: Replaced call GetFileSize(FHandle, @dwSizeHigh); with FileSize(FHandle); { *Converted from GetFileSize* }
+modSD.pas Note: Added unit "FileUtil" to uses section.
+modSD.pas(883,9) Note: Replaced call CloseHandle(FHandle); with FileClose(FHandle); { *Converted from CloseHandle* }
+modSD.pas(877,9) Note: Replaced call CloseHandle(FHandle); with FileClose(FHandle); { *Converted from CloseHandle* }
+modSD.pas(776,5) Note: Replaced call CloseHandle(FHandle); with FileClose(FHandle); { *Converted from CloseHandle* }
+mod232.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+mod232.pas Note: Repairing include files : OrionZEm.inc
+mod232.pas(45,13) Note: Added MODE Delphi syntax modifier after unit name.
+EthThrd.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+EthThrd.pas Note: Repairing include files : OrionZEm.inc
+EthThrd.pas(24,14) Note: Added MODE Delphi syntax modifier after unit name.
+EthThrd.pas(657,5) Note: Replaced call CloseHandle(FTAPHandle); with FileClose(FTAPHandle); { *Converted from CloseHandle* }
+EthThrd.pas(642,5) Note: Replaced call CloseHandle(hndl); with FileClose(hndl); { *Converted from CloseHandle* }
+EthThrd.pas(635,5) Note: Replaced call CloseHandle(hndl); with FileClose(hndl); { *Converted from CloseHandle* }
+EthThrd.pas(485,3) Note: Replaced call CloseHandle(FReadEvent); with FileClose(FReadEvent); { *Converted from CloseHandle* }
+EthThrd.pas(484,3) Note: Replaced call CloseHandle(FWriteEvent); with FileClose(FWriteEvent); { *Converted from CloseHandle* }
+mod8019as.pas Note: Repairing include files : OrionZEm.inc
+mod8019as.pas(18,16) Note: Added MODE Delphi syntax modifier after unit name.
+ : 
+ : *** Converting unit files found during conversion ***
+CPDrv.pas(40,12) Note: Added MODE Delphi syntax modifier after unit name.
+CPDrv.pas(805,5) Note: Replaced call CloseHandle( FHandle ); with FileClose(FHandle ); { *Converted from CloseHandle* }
+uCRC32.pas(18,13) Note: Added MODE Delphi syntax modifier after unit name.
+ : 
+ : *** Fixing used units and Repairing form files ***
+mainwin.pas Note: Removed property "TextHeight".
+mainwin.pas Note: Removed property "OldCreateOrder".
+mainwin.pas Note: Changed Top coord of TPaintBox from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TPaintBox from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "2" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "674" to "672" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "604" to "602" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "488" to "486" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "423" to "421" inside TPanel.
+mainwin.pas Note: Changed Top coord of TButton from "123" to "121" inside TPanel.
+mainwin.pas Note: Changed Left coord of TButton from "303" to "301" inside TPanel.
+mainwin.pas Note: Changed Top coord of TButton from "123" to "121" inside TPanel.
+mainwin.pas Note: Changed Left coord of TButton from "219" to "217" inside TPanel.
+mainwin.pas Note: Changed Top coord of TMaskEdit from "85" to "83" inside TPanel.
+mainwin.pas Note: Changed Left coord of TMaskEdit from "330" to "328" inside TPanel.
+mainwin.pas Note: Changed Top coord of TCheckBox from "102" to "100" inside TPanel.
+mainwin.pas Note: Changed Left coord of TCheckBox from "211" to "209" inside TPanel.
+mainwin.pas Note: Changed Top coord of TCheckBox from "84" to "82" inside TPanel.
+mainwin.pas Note: Changed Left coord of TCheckBox from "222" to "220" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "218" to "216" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "3" to "1" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "108" to "106" inside TPanel.
+mainwin.pas Note: Changed Top coord of TStringGrid from "3" to "1" inside TPanel.
+mainwin.pas Note: Changed Left coord of TStringGrid from "3" to "1" inside TPanel.
+mainwin.pas Note: Changed Top coord of TLabel from "4" to "2" inside TPanel.
+mainwin.pas Note: Changed Left coord of TLabel from "559" to "557" inside TPanel.
+mainwin.pas Note: Changed Top coord of TLabel from "13" to "11" inside TPanel.
+mainwin.pas Note: Changed Left coord of TLabel from "384" to "382" inside TPanel.
+mainwin.pas Note: Changed Top coord of TPanel from "27" to "25" inside TPanel.
+mainwin.pas Note: Changed Left coord of TPanel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TLabel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TLabel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TPanel from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TPanel from "0" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TButton from "33" to "31" inside TPanel.
+mainwin.pas Note: Changed Left coord of TButton from "6" to "4" inside TPanel.
+mainwin.pas Note: Changed Top coord of TMaskEdit from "34" to "32" inside TPanel.
+mainwin.pas Note: Changed Left coord of TMaskEdit from "446" to "444" inside TPanel.
+mainwin.pas Note: Changed Top coord of TButton from "33" to "31" inside TPanel.
+mainwin.pas Note: Changed Left coord of TButton from "359" to "357" inside TPanel.
+mainwin.pas Note: Changed Top coord of TButton from "33" to "31" inside TPanel.
+mainwin.pas Note: Changed Left coord of TButton from "178" to "176" inside TPanel.
+mainwin.pas Note: Changed Top coord of TMaskEdit from "34" to "32" inside TPanel.
+mainwin.pas Note: Changed Left coord of TMaskEdit from "118" to "116" inside TPanel.
+mainwin.pas Note: Changed Top coord of TBevel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TBevel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TLabel from "6" to "4" inside TPanel.
+mainwin.pas Note: Changed Left coord of TLabel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TLabel from "38" to "36" inside TPanel.
+mainwin.pas Note: Changed Left coord of TLabel from "511" to "509" inside TPanel.
+mainwin.pas Note: Changed Top coord of TPanel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Left coord of TPanel from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TMemo from "69" to "67" inside TPanel.
+mainwin.pas Note: Changed Left coord of TMemo from "1" to "0" inside TPanel.
+mainwin.pas Note: Changed Top coord of TPanel from "181" to "179" inside TPanel.
+mainwin.pas Note: Changed Left coord of TPanel from "0" to "0" inside TPanel.
+settswin.pas Note: Removed property "TextHeight".
+settswin.pas Note: Removed property "OldCreateOrder".
+settswin.pas Note: Changed Top coord of TButton from "5" to "3" inside TPanel.
+settswin.pas Note: Changed Left coord of TButton from "358" to "356" inside TPanel.
+settswin.pas Note: Changed Top coord of TButton from "5" to "3" inside TPanel.
+settswin.pas Note: Changed Left coord of TButton from "61" to "59" inside TPanel.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "273" to "271" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "255" to "253" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "237" to "235" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "218" to "216" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "199" to "197" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "181" to "179" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "163" to "161" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "92" to "78" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "145" to "143" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TSpeedButton from "120" to "106" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TSpeedButton from "336" to "334" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "137" to "123" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "183" to "181" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "123" to "109" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "165" to "163" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "109" to "95" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "144" to "142" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "124" to "110" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "277" to "275" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "110" to "96" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "256" to "254" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "137" to "123" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "239" to "237" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "124" to "110" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "221" to "219" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "110" to "96" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "200" to "198" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TLabel from "94" to "80" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TLabel from "38" to "36" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TCheckBox from "93" to "79" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TCheckBox from "9" to "7" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TComboBox from "24" to "10" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TComboBox from "12" to "10" inside TGroupBox.
+settswin.pas Note: Changed Top coord of TComboBox from "24" to "10" inside TGroupBox.
+settswin.pas Note: Changed Left coord of TComboBox from "12" to "10" inside TGroupBox.
+frmAbout.pas Note: Removed property "TextHeight".
+frmAbout.pas Note: Removed property "OldCreateOrder".
+frmAbout.pas Note: Changed Top coord of TImage from "8" to "6" inside TPanel.
+frmAbout.pas Note: Changed Left coord of TImage from "8" to "6" inside TPanel.
+frmSaveOrd.pas Note: Removed property "TextHeight".
+frmSaveOrd.pas Note: Removed property "OldCreateOrder".
+frmSaveOrd.pas Note: Changed Top coord of TButton from "8" to "6" inside TPanel.
+frmSaveOrd.pas Note: Changed Left coord of TButton from "16" to "14" inside TPanel.
+frmSaveOrd.pas Note: Changed Top coord of TButton from "8" to "6" inside TPanel.
+frmSaveOrd.pas Note: Changed Left coord of TButton from "277" to "275" inside TPanel.
+frmSaveOrd.pas Note: Changed Top coord of TListBox from "8" to "6" inside TPanel.
+frmSaveOrd.pas Note: Changed Left coord of TListBox from "8" to "6" inside TPanel.
+frNewVal.pas Note: Removed property "TextHeight".
+frNewVal.pas Note: Removed property "OldCreateOrder".
+ Progress: Conversion took: 00:00:18
+ : Conversion Ready.

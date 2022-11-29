@@ -17,11 +17,13 @@
 
 {***********************************************
 
-    WD1793 (1818ВГ93) emulation
+    WD1793 (1818Г‚Гѓ93) emulation
 
  ***********************************************}
 
 unit mod1793;
+
+{$MODE Delphi}
 
 interface
 
@@ -129,7 +131,7 @@ type
   TDriveArray = array[0..1] of ShortString;
 
   TFDController = class(T1793)
-    FRGU: byte;                  // регистр управления: D0,D1=drive, D4=!side, плотность всегда двойная
+    FRGU: byte;                  // Г°ГҐГЈГЁГ±ГІГ° ГіГЇГ°Г ГўГ«ГҐГ­ГЁГї: D0,D1=drive, D4=!side, ГЇГ«Г®ГІГ­Г®Г±ГІГј ГўГ±ГҐГЈГ¤Г  Г¤ГўГ®Г©Г­Г Гї
     FOnAccess: TOnAccess;
     FDrive: TDriveArray;
     FStream: array[0..1] of TFileStream;
@@ -645,7 +647,7 @@ end;
 
 function TFDController.GetRGU: byte;
 begin
-  Result:=$FF;     // недоступен на чтение
+  Result:=$FF;     // Г­ГҐГ¤Г®Г±ГІГіГЇГҐГ­ Г­Г  Г·ГІГҐГ­ГЁГҐ
 end;
 
 procedure TFDController.SetRGU(const Value: byte);

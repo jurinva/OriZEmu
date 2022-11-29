@@ -39,6 +39,8 @@
 
 unit CPDrv;
 
+{$MODE Delphi}
+
 interface
 
 uses
@@ -802,7 +804,7 @@ begin
     // Stop the timer (used for polling)
     KillTimer( FNotifyWnd, 1 );
     // Release the COM port
-    CloseHandle( FHandle );
+    FileClose(FHandle ); { *Converted from CloseHandle* }
     // No more connected 
     FHandle := INVALID_HANDLE_VALUE;
   end;

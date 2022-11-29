@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="OrionZEm.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mainwin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="14"/>
+        <CursorPos X="3" Y="29"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modWaveOut.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modZ80.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ScrThrd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mod8255.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mod1793.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modOrion.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mod146818.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settswin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uIniMngr.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="422"/>
+        <CursorPos X="10" Y="437"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="frmAbout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modAY8912.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modHDD.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="HDDUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modF600.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="frmSaveOrd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UTILS/OdiWcx-OhiWcx/uPackOdi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UTILS/OdiWcx-OhiWcx/wcxhead.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="frNewVal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="modSD.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mod232.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="EthThrd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mod8019as.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="CPDrv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uCRC32.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="20">
+      <Position>
+        <Filename Value="mainwin.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="mainwin.pas"/>
+        <Caret Line="29" Column="3" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="24" Column="6" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="204" Column="35" TopLine="189"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="225" Column="35" TopLine="210"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="243" Column="35" TopLine="228"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="313" Column="35" TopLine="298"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="330" Column="35" TopLine="315"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="349" Column="35" TopLine="334"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="369" Column="35" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="682" Column="36" TopLine="667"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="703" Column="36" TopLine="709"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="24" Column="56" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="20" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="839" Column="11" TopLine="819"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="24" Column="66" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="369" Column="39" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="680" Column="57" TopLine="665"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="369" Column="34" TopLine="358"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="24" Column="58"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="437" Column="6" TopLine="432"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <SkipCheckLCLInterfaces Value="True"/>
+</CONFIG>

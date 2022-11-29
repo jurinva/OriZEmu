@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1625802185"/>
+  <Params Value=" -Mdelphi -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fi/tmp/OriZEmu/UTILS/OdiWcx-OhiWcx -Fu/tmp/OriZEmu/UTILS/OdiWcx-OhiWcx -Fu/usr/share/lazarus/2.2.4/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/2.2.4/lcl/units/x86_64-linux -Fu/usr/share/lazarus/2.2.4/components/freetype/lib/x86_64-linux -Fu/usr/share/lazarus/2.2.4/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/2.2.4/packager/units/x86_64-linux -Fu/tmp/OriZEmu/ -FE/tmp/OriZEmu/lib/x86_64-linux/ -o/tmp/OriZEmu/lib/x86_64-linux/OrionZEm -dLCL -dLCLgtk2 -dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL OrionZEm.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
