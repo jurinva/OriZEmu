@@ -797,19 +797,22 @@ function TIniManager.WritePrivateSection(SectionName:string;
   Buffer: PChar;
   i, ii: integer;
   res: boolean;
+  IniF:TINIFile;// Класс для работы с INI-файлами
  begin
   GetMem(Buffer, BufSize);
   try
     i:=0;
     Buffer[0]:=#0; Buffer[1]:=#0;
-    WritePrivateProfileSection(PChar(Section), nil, PChar(FIniFile.FileName));  // clear in file
+    Inif := TINIFile.Create(PChar(FIniFile.FileName));
+    Inif.WriteString(PChar(Section),'',''); // .WriteString(PChar(Section), nil, PChar(FIniFile.FileName));  // clear in file
     for ii:=0 to Strings.Count-1 do
     begin
       StrPCopy(@Buffer[i], Strings.Strings[ii]);
       i:=i+Length(Strings.Strings[ii])+1;
     end;
     Buffer[i]:=#0;
-    res:=WritePrivateProfileSection(PChar(Section), Buffer, PChar(FIniFile.FileName));
+    //res:=WritePrivateProfileSection(PChar(Section), Buffer, PChar(FIniFile.FileName));
+    Inif.WriteString(PChar(Section),'','');
     if not Res then raise Exception.Create('IniFile Write Error: + FIniFile.FileName');
   finally
     FreeMem(Buffer, BufSize);

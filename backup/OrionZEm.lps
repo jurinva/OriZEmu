@@ -84,8 +84,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="422"/>
-        <CursorPos X="10" Y="437"/>
+        <TopLine Value="792"/>
+        <CursorPos X="39" Y="807"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -199,7 +199,7 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="20">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="mainwin.pas"/>
       </Position>
@@ -281,7 +281,39 @@
       </Position>
       <Position>
         <Filename Value="uIniMngr.pas"/>
-        <Caret Line="437" Column="6" TopLine="432"/>
+        <Caret Line="437" Column="19" TopLine="412"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="33" Column="26" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="805" Column="16" TopLine="790"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="24" Column="65" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="805" Column="45" TopLine="790"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="804" Column="34" TopLine="792"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="800" Column="72" TopLine="789"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="808" TopLine="794"/>
+      </Position>
+      <Position>
+        <Filename Value="uIniMngr.pas"/>
+        <Caret Line="807" Column="45" TopLine="792"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -434,7 +434,7 @@ begin
      end;
      if Length(st)>BufferSize-3 then st:=copy(st,1,BufferSize-3);
      st:=st+#0#0;
-     Move(Buffer, PChar(st), Length(st));
+     Move(Buffer, st, Length(st));
      Result:=Length(st);
      FileSL.Free;
 end;
@@ -797,12 +797,14 @@ function TIniManager.WritePrivateSection(SectionName:string;
   Buffer: PChar;
   i, ii: integer;
   res: boolean;
+  IniF:TINIFile;// Класс для работы с INI-файлами
  begin
   GetMem(Buffer, BufSize);
   try
     i:=0;
     Buffer[0]:=#0; Buffer[1]:=#0;
-    WritePrivateProfileSection(PChar(Section), nil, PChar(FIniFile.FileName));  // clear in file
+    Inif := TINIFile.Create(PChar(FIniFile.FileName));
+    Inif.WriteString(PChar(Section),'',''); // .WriteString(PChar(Section), nil, PChar(FIniFile.FileName));  // clear in file
     for ii:=0 to Strings.Count-1 do
     begin
       StrPCopy(@Buffer[i], Strings.Strings[ii]);
